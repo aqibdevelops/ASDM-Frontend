@@ -1,0 +1,44 @@
+
+.wrapper {
+    display: flex;
+
+}
+
+.side-section {
+    width: 50vw;
+    height: 100vh;
+}
+
+
+.login-section {
+    width: 400px;
+    height: 400px;
+    background-color: #D7C9FF;
+    border-radius: 25px;
+    margin: auto;
+    margin-top: 25vh;
+}
+
+.login-container {
+    width: 90%;
+    height: 90%;
+    margin: auto;
+    margin-top: 20px;
+
+}
+
+.list-items > input {
+    width: 97.8%;
+}
+
+.list-items > button {
+    width: 100%;
+}
+
+.flex-column {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
