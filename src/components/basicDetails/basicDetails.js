@@ -1,6 +1,5 @@
 import React from 'react'
 import './basicDetails.css'
-import Navbar from '../components/navbar';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 
 function BasicDetails() {
@@ -65,8 +64,6 @@ function BasicDetails() {
             <Button className='next-btn'>Next</Button>
             </Col>
         </Row>
-        
-        
       </div>
       
     </Container>

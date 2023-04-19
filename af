@@ -1,0 +1,17 @@
+[33mcommit 4468bdfac31fe832b1d2d15b6774c845c2f523e8[m[33m ([m[1;36mHEAD -> [m[1;32mdevelopment[m[33m)[m
+Author: test15 <aquibalam.13@gmail.com>
+Date:   Wed Apr 19 15:41:14 2023 +0530
+
+    Added UI of registration page
+
+[33mcommit 227dacc39064bbe94340bf024d1320d5738a5280[m[33m ([m[1;31morigin/development[m[33m)[m
+Author: ankitsharma1506 <ankitsharma1506.work@gmail.com>
+Date:   Thu Apr 13 13:46:12 2023 +0530
+
+    First commit on frontend
+
+[33mcommit cbc9a81a494699f52d6373cf252ff91a709b8dc9[m
+Author: ankitsharma1506 <ankitsharma1506.work@gmail.com>
+Date:   Thu Apr 13 10:29:23 2023 +0530
+
+    Initialize project using Create React App
