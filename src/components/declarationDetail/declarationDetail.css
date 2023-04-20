@@ -1,0 +1,29 @@
+.declaration-font {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 35px;
+    color: #05445E;
+
+
+}
+
+.declaration-padding {
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+.next-box {
+    position: absolute;
+    width: 155px;
+    height: 47px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #05445E;
+    background: #75E6DA;
+    border: 1px solid #05445E;
+}

@@ -1,5 +1,5 @@
 import React from 'react'
-import '../basicDetails/basicDetails.css'
+import './addressDetails.css'
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 
@@ -13,59 +13,79 @@ export default function AddressDetails () {
     const districtData = []
     
     return (
-        <div className='box'>
+        <div className='align-to-top box'>
             <Container>
-                <h3 style={{textAlign: 'center'}}>Address Details</h3>
                 <Form>
-                <Row className='row-cols-sm-1 row-cols-md-2 row-cols-lg-2 pt-4'>
-                    <Col>
-                        <Form.Control type="text" placeholder="House No." />
-                    </Col>
-                    <Col>
-                        <Form.Control type="text" placeholder="Street" />
-                    </Col>
-                </Row>
-                <Row className='row-cols-sm-1 row-cols-md-2 row-cols-lg-2 pt-4'>
-                    <Col>
-                        <Form.Select placeholder='DISTRICT'>
-                        <option disabled>DISTRICT</option>
-                        </Form.Select>
-                    </Col>
-                    <Col>
+                <div className='heading-font row'>Address Details</div>
+                <div className='pb-5 row'>
+                    <div className='col-sm-4'>
+                    <div className='col-sm-4'>
+                        <p className='font-400-16'>House no.</p>
+                        <input className='font-400-18 textfield' type="text" placeholder='House no' />
+                    </div>
+                    </div>
+                    <div className='col-sm-8'>
+                        <p className='font-400-16'>Street Name</p>
+                        <input className='font-400-18 textfield-2x' type="text" placeholder='Street Name' />
+                    </div>
+                </div>
+                <div className='pb-5 row'>
+                    <div className='col-sm-4'>
+                        <p className='font-400-16'>Is City/Village?</p>
                         <div className='row'>
-                            <span className='col-sm-6'>Is&nbsp;City/Village?</span>
-                            <Form.Check className="col-sm-3" type="radio" label="Yes"  value={1} />
-                            <Form.Check className="col-sm-3" type="radio" label="No" value={0} />
+                            <div className='col-sm-2'>
+                                <input className="ellipse" type="radio" id="yes" name="fav_language" value="HTML" />
+                            </div>
+                            <div className='col-sm-4'>
+                                <label for="yes">YES</label>
+                            </div>
+                            <div className='col-sm-2'>
+                                <input className="ellipse" type="radio" id="no" name="fav_language" value="CSS" />
+                            </div>    
+                            <div className='col-sm-4'>    
+                                <label for="no">NO</label>
+                            </div>
                         </div>
-                    </Col>
-                </Row>
-                <Row className='row-cols-sm-1 row-cols-md-2 row-cols-lg-2 pt-4'>
-                    <Col>
-                        <Form.Select placeholder='BLOCK'>
-                        <option disabled>BLOCK</option>
-                        </Form.Select>
-                    </Col>
-                    <Col>
-                        <Form.Control type="text" placeholder="PINCODE" />
-                    </Col>
-                </Row>
-                <Row className='row-cols-sm-1 row-cols-md-2 row-cols-lg-2 pt-4'>
-                    <Col>
-                        <Form.Control type="text" placeholder="POLICE STATION" />
-                    </Col>
-                    <Col>
-                        <Form.Control type="text" placeholder="POST OFFICE" />
-                    </Col>
-                </Row>
+                    </div>
+                    <div className='col-sm-4'>
+                        <p className='font-400-16'>City/Village Name</p>
+                        <input className='font-400-18 textfield' type="text" placeholder='City/Village Name' />
+                    </div>
+                    <div className='col-sm-4'>
+                        <p className='font-400-16'>District</p>
+                        <select className='font-400-18 textfield' type="text">
+                            <option selected disabled>District</option>
+                            <option>Kamrup</option>
+                            <option>Nagaon</option>
+                            <option>Dibrugarh</option>
+                            <option>Silchar</option>
+                            <option>Barpeta</option>
+                        </select>
+                    </div>
+                </div>
+                <div className='pb-5 row'>
+                    <div className='col-sm-4'>
+                        <p className='font-400-16'>Pincode</p>
+                        <input className='font-400-18 textfield' type="text" placeholder='Pincode' />
+                    </div>
+                    <div className='col-sm-4'>
+                        <p className='font-400-16'>Police Station</p>
+                        <input className='font-400-18 textfield' type="text" placeholder='Police Station' />
+                    </div>
+                    <div className='col-sm-4'>
+                        <p className='font-400-16'>Post Office</p>
+                        <input className='font-400-18 textfield' type="text" placeholder='Post Office' />
+                    </div>
+                </div>
 
                 </Form>
                 <div className='button-container container'>
                     <Row>
                     <Col xs={{ span: 6, offset: 3 }} md={{ span: 3, offset: 6 }} className="d-flex justify-content-end">
-                        <Button className='prev-btn'>Back</Button>
+                        <button className='previous-box'>Back</button>
                         </Col>
                     <Col xs={{ span: 6 }} md={{ span: 3 }} className="d-flex justify-content-end">
-                        <Button className='next-btn' onClick={toCourseDetails}>Next</Button>
+                        <button className='next-box' onClick={toCourseDetails}>Next</button>
                         </Col>
                     </Row>
                 </div>

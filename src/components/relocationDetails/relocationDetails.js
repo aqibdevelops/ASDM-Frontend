@@ -14,67 +14,144 @@ export default function RelocationDetail() {
   }
 
   return (
-    <div className='box'>
+    <div className='align-to-top box'>
         <div>
-            <div className="row">
-              <div className="col-sm-6">
-                <span>Willing to go outside district for employment?</span>
-              </div>
-              <div className = "col-sm-6">
-                <Form.Group name="relocation">
-                  <div className='row'>
-                    <div className='col-sm-6'>
-                      <Form.Check className="yes-no1" onClick={() => {setRelocationDistrict(true); console.log(relocationDistrict)}} type="radio" label="Yes" name="relocation" value={1} />
-                    </div>
-                    <div className='col-sm-6'>
-                      <Form.Check className="yes-no1" onClick={() => {setRelocationDistrict(false); console.log(relocationDistrict)}} type="radio" label="No" name="relocation" value={0} />
-                    </div>
-                  </div>
-                </Form.Group>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-sm-6">
-                <span>Willing to go outside State for employment?</span>
-              </div>
-              <div className = "col-sm-6">
-                <Form.Group name="relocation">
-                  <div className='row'>
-                    <div className='col-sm-6'>
-                      <Form.Check className="yes-no2" type="radio" label="Yes" name="relocation" value={1} />
-                    </div>
-                    <div className='col-sm-6'>
-                      <Form.Check className="yes-no2" type="radio" label="No" name="relocation" value={0} />
-                    </div>
-                  </div>
-                </Form.Group>
+          <div className='pb-5 row'>
+            <div className='col-sm-4'>
+              <p className='font-400-16'>Willing to work outside District</p>
+              <div className='row'>
+                <div className='col-sm-2'>
+                    <input className="ellipse" type="radio" id="yes" name="fav_language" value="HTML" />
+                </div>
+                <div className='col-sm-4'>
+                    <label for="yes">YES</label>
+                </div>
+                <div className='col-sm-2'>
+                    <input className="ellipse" type="radio" id="no" name="fav_language" value="CSS" />
+                </div>    
+                <div className='col-sm-4'>    
+                    <label for="no">NO</label>
+                </div>
               </div>
             </div>
-            <div className="row">
-              <div className="col-sm-6">
-                <span>Willing to go outside India for employment?</span>
-              </div>
-              <div className = "col-sm-6">
-                <Form.Group name="relocation">
-                  <div className='row'>
-                    <div className='col-sm-6'>
-                      <Form.Check className="yes-no3" type="radio" label="Yes" name="relocation" value={1} />
-                    </div>
-                    <div className='col-sm-6'>
-                      <Form.Check className="yes-no3" type="radio" label="No" name="relocation" value={0} />
-                    </div>
-                  </div>
-                </Form.Group>
+            <div className='col-sm-4'>
+              <p className='font-400-16'>Willing to work outside State</p>
+              <div className='row'>
+                <div className='col-sm-2'>
+                    <input className="ellipse" type="radio" id="yes" name="fav_language" value="HTML" />
+                </div>
+                <div className='col-sm-4'>
+                    <label for="yes">YES</label>
+                </div>
+                <div className='col-sm-2'>
+                    <input className="ellipse" type="radio" id="no" name="fav_language" value="CSS" />
+                </div>    
+                <div className='col-sm-4'>    
+                    <label for="no">NO</label>
+                </div>
               </div>
             </div>
-            <Row>
-              <Col xs={{ span: 6, offset: 3 }} md={{ span: 3, offset: 6 }} className="d-flex justify-content-end">
-                <Button className='prev-btn'>Back</Button>
-                </Col>
-              <Col xs={{ span: 6 }} md={{ span: 3 }} className="d-flex justify-content-end">
-                <Button onClick={toDeclarationDetail} className='next-btn'>Next</Button>
-                </Col>
-            </Row>
+            <div className='col-sm-4'>
+              <p className='font-400-16'>Willing to work outside India</p>
+              <div className='row'>
+                <div className='col-sm-2'>
+                    <input className="ellipse" type="radio" id="yes" name="fav_language" value="HTML" />
+                </div>
+                <div className='col-sm-4'>
+                    <label for="yes">YES</label>
+                </div>
+                <div className='col-sm-2'>
+                    <input className="ellipse" type="radio" id="no" name="fav_language" value="CSS" />
+                </div>    
+                <div className='col-sm-4'>    
+                    <label for="no">NO</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className='pb-5 row'>
+            <div className='col-sm-4'>
+              <p className='font-400-16'>District Preferance 1</p>
+              <select className='font-400-18 textfield' type="text">
+                  <option selected disabled>District Preferance 1</option>
+                  <option>Kamrup</option>
+                  <option>Nagaon</option>
+                  <option>Dibrugarh</option>
+                  <option>Silchar</option>
+                  <option>Barpeta</option>
+              </select>
+            </div>
+            <div className='col-sm-4'>
+            <p className='font-400-16'>State Preferance 1</p>
+            <select className='font-400-18 textfield' type="text">
+                <option selected disabled>State Preferance 1</option>
+                <option>Kamrup</option>
+                <option>Nagaon</option>
+                <option>Dibrugarh</option>
+                <option>Silchar</option>
+                <option>Barpeta</option>
+            </select>
+          </div>
+          <div className='col-sm-4'></div>
+          </div>
+          <div className='pb-5 row'>
+            <div className='col-sm-4'>
+                <p className='font-400-16'>District Preferance 2</p>
+                <select className='font-400-18 textfield' type="text">
+                    <option selected disabled>District Preferance 2</option>
+                    <option>Kamrup</option>
+                    <option>Nagaon</option>
+                    <option>Dibrugarh</option>
+                    <option>Silchar</option>
+                    <option>Barpeta</option>
+                </select>
+              </div>
+              <div className='col-sm-4'>
+              <p className='font-400-16'>State Preferance 2</p>
+              <select className='font-400-18 textfield' type="text">
+                  <option selected disabled>State Preferance 2</option>
+                  <option>Kamrup</option>
+                  <option>Nagaon</option>
+                  <option>Dibrugarh</option>
+                  <option>Silchar</option>
+                  <option>Barpeta</option>
+              </select>
+            </div>
+            <div className='col-sm-4'></div>
+            </div>
+          <div className='pb-5 row'>
+            <div className='col-sm-4'>
+                <p className='font-400-16'>District Preferance 3</p>
+                <select className='font-400-18 textfield' type="text">
+                    <option selected disabled>District Preferance 3</option>
+                    <option>Kamrup</option>
+                    <option>Nagaon</option>
+                    <option>Dibrugarh</option>
+                    <option>Silchar</option>
+                    <option>Barpeta</option>
+                </select>
+              </div>
+              <div className='col-sm-4'>
+              <p className='font-400-16'>State Preferance 3</p>
+              <select className='font-400-18 textfield' type="text">
+                  <option selected disabled>State Preferance 3</option>
+                  <option>Kamrup</option>
+                  <option>Nagaon</option>
+                  <option>Dibrugarh</option>
+                  <option>Silchar</option>
+                  <option>Barpeta</option>
+              </select>
+            </div>
+            <div className='col-sm-4'></div>
+          </div>
+          <Row>
+            <Col xs={{ span: 6, offset: 3 }} md={{ span: 3, offset: 6 }} className="d-flex justify-content-end">
+              <button className='previous-box'>Back</button>
+              </Col>
+            <Col xs={{ span: 6 }} md={{ span: 3 }} className="d-flex justify-content-end">
+              <button onClick={toDeclarationDetail} className='next-box'>Next</button>
+              </Col>
+          </Row>
         </div>
     </div>
   )

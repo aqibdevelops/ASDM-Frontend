@@ -1,0 +1,80 @@
+.new-course-button {
+    box-sizing: border-box;
+    position: absolute;
+    width: 155px;
+    height: 47px;
+    background: #05445E;
+    border: 1px solid #05445E;    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.table-padding {
+    padding-bottom: 100px;
+}
+
+.table-padding-inner {
+    padding-bottom: 100px;
+}
+
+.table-font {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: #05445E;
+}
+
+.horizontal-line {
+    border: 1px solid #05445E;
+    width: 850px;
+}
+
+.align-to-top {
+    padding-top: 150px;
+}
+
+.heading-font {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 39px;
+    color: #05445E;
+    padding-bottom: 20px;
+}
+
+.previous-box {
+    position: absolute;
+    width: 155px;
+    height: 47px;
+    background: #ffffff;
+    border: 1px solid #05445E;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #05445E;
+}
+
+.next-box {
+    position: absolute;
+    width: 155px;
+    height: 47px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #05445E;
+    background: #75E6DA;
+    border: 1px solid #05445E;
+}

@@ -5,8 +5,14 @@
 
 }
 
-.align-to-top {
-    padding-top: 150px;
+.ellipse{
+
+box-sizing: border-box;
+position: absolute;
+width: 30px;
+height: 30px;
+background: #D4F1F4;
+border: 1px solid #05445E;
 }
 
 .textfield {
@@ -65,32 +71,14 @@
     width: 100%;
 }
 
-.previous-box {
-    position: absolute;
-    width: 155px;
-    height: 47px;
-    background: #ffffff;
-    border: 1px solid #05445E;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
-
-    color: #05445E;
+.prev-btn {
+    background-color: #fff !important;
+    width: 100%;
+    color: #000 !important;
 }
 
-.next-box {
-    position: absolute;
-    width: 155px;
-    height: 47px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
-    color: #05445E;
-    background: #75E6DA;
-    border: 1px solid #05445E;
+.align-to-top {
+    padding-top: 150px;
 }
+
 

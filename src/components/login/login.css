@@ -1,23 +1,37 @@
-
+body{
+    font-family: 'Coming Soon', sans-serif;
+    color: #D4F1F4;
+}
 .wrapper {
     display: flex;
 
 }
 
 .side-section {
-    width: 50vw;
-    height: 100vh;
+    display: inline-block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
 }
 
 
 .login-section {
     width: 400px;
     height: 400px;
-    background-color: #D7C9FF;
+    background-color: #05445E;
     border-radius: 25px;
     margin: auto;
     margin-top: 25vh;
 }
+
+.custom-btn {
+    background: #189AB4;
+    padding: 5px 10px;
+    text-transform: uppercase;
+  }
 
 .login-container {
     width: 90%;

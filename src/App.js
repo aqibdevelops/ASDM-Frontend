@@ -9,10 +9,13 @@ import PersonalDetails from './components/personalDetails/personalDetails';
 import AddressDetails from './components/addressDetails/addressDetails';
 import DeclarationDetail from './components/declarationDetail/declarationDetail'
 import Success from './components/successPage/successPage';
+import Footer from './components/footer';
+import Header from './components/header';
 
 function App() {
   return (
     <div className="App">
+      <Header />
       <BrowserRouter>
         <Routes>
           <Route path = '/' element = { <Login /> } />
@@ -25,6 +28,7 @@ function App() {
           <Route path = '/success' element = { <Success /> } />
         </Routes>
       </BrowserRouter>
+      <Footer />
     </div>
   );
 }
