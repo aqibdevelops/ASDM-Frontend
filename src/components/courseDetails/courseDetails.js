@@ -1,8 +1,16 @@
 import React from 'react'
 import './courseDetails.css'
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 
 function CourseDetails() {
+
+    const navigate = useNavigate()
+
+    const toRelocationDetails =  () => {
+        navigate('/relocationDetails')
+    }
+
   return (
     <div className='box'>
         <Container>
@@ -53,7 +61,7 @@ function CourseDetails() {
             <Button className='prev-btn'>Back</Button>
             </Col>
           <Col xs={{ span: 6 }} md={{ span: 3 }} className="d-flex justify-content-end">
-            <Button className='next-btn'>Next</Button>
+            <Button onClick={toRelocationDetails} className='next-btn'>Next</Button>
             </Col>
         </Row>
       </div>
