@@ -14,6 +14,9 @@ export default function DeclarationDetail() {
     navigate('/success')
   }
 
+  const [declarationCheck, setDeclarationCheck] = useState(false)
+
+
   return (
     <div className='align-to-top box'>
     <div className='heading-font row'>Declaration</div>
@@ -34,11 +37,15 @@ export default function DeclarationDetail() {
               </div>
             </div>
         </div>
-        <Row>
-          <Col>
-            <button onClick={toSuccessPage} className='next-box'>Submit</button>
-          </Col>
-        </Row>
+        <div>
+          <input onChange={(e) => setDeclarationCheck(e.currentTarget.checked)} type="checkbox" checked={declarationCheck} />
+          <span className='px-3'>I Agree</span>
+        </div>
+        <div className='pt-5 row'>
+          <div>
+            { declarationCheck ? <button onClick={toSuccessPage} className='next-box'>Submit</button> : <div /> }
+          </div>
+        </div>
     </div>
   )
 }

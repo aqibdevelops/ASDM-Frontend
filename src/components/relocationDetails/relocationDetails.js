@@ -13,8 +13,13 @@ export default function RelocationDetail() {
     navigate('/declarationDetail')
   }
 
+  const toCourseDetail = () => {
+    navigate('/courseDetails')
+  }
+
   return (
     <div className='align-to-top box'>
+        <div className='heading-font'>Relocation Details</div>
         <div>
           <div className='pb-5 row'>
             <div className='col-sm-4'>
@@ -70,7 +75,7 @@ export default function RelocationDetail() {
             </div>
           </div>
           <div className='pb-5 row'>
-            <div className='col-sm-4'>
+            <div className='col-sm-4 pb-5'>
               <p className='font-400-16'>District Preferance 1</p>
               <select className='font-400-18 textfield' type="text">
                   <option selected disabled>District Preferance 1</option>
@@ -95,7 +100,7 @@ export default function RelocationDetail() {
           <div className='col-sm-4'></div>
           </div>
           <div className='pb-5 row'>
-            <div className='col-sm-4'>
+            <div className='col-sm-4 pb-5'>
                 <p className='font-400-16'>District Preferance 2</p>
                 <select className='font-400-18 textfield' type="text">
                     <option selected disabled>District Preferance 2</option>
@@ -120,7 +125,7 @@ export default function RelocationDetail() {
             <div className='col-sm-4'></div>
             </div>
           <div className='pb-5 row'>
-            <div className='col-sm-4'>
+            <div className='col-sm-4 pb-5'>
                 <p className='font-400-16'>District Preferance 3</p>
                 <select className='font-400-18 textfield' type="text">
                     <option selected disabled>District Preferance 3</option>
@@ -131,7 +136,7 @@ export default function RelocationDetail() {
                     <option>Barpeta</option>
                 </select>
               </div>
-              <div className='col-sm-4'>
+              <div className='col-sm-4 pb-5'>
               <p className='font-400-16'>State Preferance 3</p>
               <select className='font-400-18 textfield' type="text">
                   <option selected disabled>State Preferance 3</option>
@@ -144,14 +149,16 @@ export default function RelocationDetail() {
             </div>
             <div className='col-sm-4'></div>
           </div>
-          <Row>
-            <Col xs={{ span: 6, offset: 3 }} md={{ span: 3, offset: 6 }} className="d-flex justify-content-end">
-              <button className='previous-box'>Back</button>
-              </Col>
-            <Col xs={{ span: 6 }} md={{ span: 3 }} className="d-flex justify-content-end">
+          <div className='pt-5 row'>
+            <div className='col-md-3'></div>
+            <div className='col-md-3'></div>
+            <div className='col-md-3'>
+              <button onClick={toCourseDetail} className='previous-box'>Back</button>
+            </div>
+            <div className='col-md-3'>
               <button onClick={toDeclarationDetail} className='next-box'>Next</button>
-              </Col>
-          </Row>
+            </div>
+          </div>
         </div>
     </div>
   )

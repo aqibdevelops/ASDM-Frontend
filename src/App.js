@@ -11,8 +11,21 @@ import DeclarationDetail from './components/declarationDetail/declarationDetail'
 import Success from './components/successPage/successPage';
 import Footer from './components/footer';
 import Header from './components/header';
+import { useSelector, useDispatch } from 'react-redux';
+import { actions } from './store/index';
 
 function App() {
+  const counter = useSelector((state)=> state.counter)
+  const dispatch = useDispatch();
+
+  const increment = () => {
+    dispatch(actions.increment())
+  }
+
+  const decrement = () => {
+    dispatch(actions.decrement())
+  }
+
   return (
     <div className="App">
       <Header />

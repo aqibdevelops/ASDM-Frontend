@@ -3,8 +3,26 @@ import './login.css'
 import Button from 'react-bootstrap/Button';
 import { Form } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+const baseUrl = "http://127.0.0.1:7012/app1/v1/PublicServer/registrati8"
+
+const postDataInit = {
+    "postParam": {
+        "jvId": 14,
+        "selectionChoiceCount": 0
+    }
+}
 
 function Login() {
+
+  axios.post("http://127.0.0.1:7012/app1/v1/PublicServer/registrati8/get", postDataInit)
+  .then((response) => {
+    console.log(response)
+    console.log(postDataInit)
+  })
+  .catch((error) => {
+    console.log(error)
+  })
 
   const navigate = useNavigate()
 
@@ -13,11 +31,11 @@ function Login() {
   }
 
   return (
-    <div style= {{backgroundColor: "#FAE8E0"}} className='align-to-top wrapper'>
+    <div className='align-to-top wrapper'>
         <div className='side-section'>
                 <div className='login-section'>
                     <div className='login-container'>
-                        <form onSubmit={console.log("Submitted")}>
+                        <form>
                             <div className='flex-column'>
                                 <div style={{textAlign:'center', fontFamily: 'Coming Soon'}}className='pt-5 pb-3 fs-3 text'>REGISTRATION</div>
                                 <div className='py-4 row'>

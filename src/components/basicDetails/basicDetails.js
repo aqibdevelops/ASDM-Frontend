@@ -3,50 +3,64 @@ import './basicDetails.css'
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { actions } from '../../store/index';
 
 function BasicDetails() {
+  const state = useSelector((state)=> state.firstName)
+  const dispatch = useDispatch();
 
   const navigate = useNavigate()
 
+  const[firstName, setFirstName] = useState()
+  const handleFirstName = e => {
+    setFirstName(e.target.value)
+  }
   const toPersonalDetails = () => {
     navigate('/personalDetails')
   }
 
+  const FirstName = (firstName) => {
+    dispatch(actions.setFirstName(firstName))
+  }
+
   return (
     <div className='align-to-top font-600 box'>
+      {state}
+      {firstName}
     <Container>
       <Form>
       <div className='heading-font row'>Basic Details</div>
       <div className='pb-5 row'>
-        <div className='col-sm-4'>
+        <div className='col-md-4 pt-5'>
           <p className='font-400-16'>First Name</p>
-          <input className='font-400-18 textfield' type="text" />
+          <input  className='font-400-18 textfield' type="text" value={firstName} />      
         </div>
-        <div className='col-sm-4'>
+        <div className='col-md-4 pt-5'>
           <p className='font-400-16'>Middle Name</p>
           <input className='font-400-18 textfield' type="text" />
         </div>
-        <div className='col-sm-4'>
+        <div className='col-md-4 pt-5'>
           <p className='font-400-16'>Last Name</p>
           <input className='font-400-18 textfield' type="text"/>
         </div>
       </div>
       <div className='pb-5 row'>
-        <div className='col-sm-4'>
+        <div className='col-md-4 pt-5'>
           <p className='font-400-16'>Father's Name</p>
           <input className='font-400-18 textfield' type="text" />
         </div>
-        <div className='col-sm-4'>
+        <div className='col-md-4 pt-5'>
           <p className='font-400-16'>Mother's Name</p>
           <input className='font-400-18 textfield' type="text" />
         </div>
-        <div className='col-sm-4'>
+        <div className='col-md-4 pt-5'>
           <p className='font-400-16'>Date of Birth</p>
           <input className='font-400-18 textfield' type="text" placeholder='dd-mm-yyyy'/>
         </div>
       </div>
       <div className='row'>
-        <div className='col-sm-4'>
+        <div className='col-md-4 pt-5'>
           <p className='font-400-16'>Age Group</p>
           <select className='font-400-18 textfield' type="text" placeholder='Age Group'>
             <option selected disabled>Age Group</option>
@@ -55,7 +69,7 @@ function BasicDetails() {
             <option>13-15</option>
           </select>
         </div>
-        <div className='col-sm-4'>
+        <div className='col-md-4 pt-5'>
           <p className='font-400-16'>Class</p>
           <select className='font-400-18 textfield' type="text" placeholder='Class'>
             <option selected disabled>Class</option>
@@ -64,7 +78,7 @@ function BasicDetails() {
             <option>10</option>
           </select>
         </div>
-        <div className='col-sm-4'>
+        <div className='col-md-4 pt-5'>
           <p className='font-400-16'>Gender</p>
           <select className='font-400-18 textfield' type="text">
             <option selected disabled>Gender</option>
@@ -75,17 +89,14 @@ function BasicDetails() {
         </div>
       </div>
       </Form>
-      <div className='button-container container'>
-        <Row>
-          <Col xs={{ span: 6, offset: 3 }} md={{ span: 3, offset: 6 }} className="d-flex justify-content-end">
-            <button className='previous-box'>Back</button>
-            </Col>
-          <Col xs={{ span: 6 }} md={{ span: 3 }} className="d-flex justify-content-end">
-            <button className='next-box' onClick={toPersonalDetails}>Next</button>
-            </Col>
-        </Row>
+      <div className='pt-5 row'>
+        <div className='col-md-3'></div>
+        <div className='col-md-3'></div>
+        <div className='col-md-3'></div>
+        <div className='col-md-3'>
+          <button onClick={toPersonalDetails} className='next-box'>Next</button>
+        </div>
       </div>
-      
     </Container>
     </div>
   )

@@ -8,7 +8,11 @@ function CourseDetails() {
     const navigate = useNavigate()
 
     const toRelocationDetails =  () => {
-        navigate('/relocationDetails')
+      navigate('/relocationDetails')
+    }
+
+    const toAddressDetails = () => {
+      navigate('/addressDetails')
     }
 
   return (
@@ -34,17 +38,17 @@ function CourseDetails() {
                 </table>
             </div>
         </Form>
-        <div className='button-container container'>
-        <Row>
-          <Col xs={{ span: 6, offset: 3 }} md={{ span: 3, offset: 6 }} className="d-flex justify-content-end">
-            <button className='previous-box'>Back</button>
-            </Col>
-          <Col xs={{ span: 6 }} md={{ span: 3 }} className="d-flex justify-content-end">
-            <button onClick={toRelocationDetails} className='next-box'>Next</button>
-            </Col>
-        </Row>
+      <div className='pt-5 row'>
+        <div className='col-md-3'></div>
+        <div className='col-md-3'></div>
+        <div className='col-md-3'>
+        <button onClick={toAddressDetails}  className='previous-box'>Back</button>
+        </div>
+        <div className='col-md-3'>
+        <button onClick={toRelocationDetails} className='next-box'>Next</button>
+        </div>
       </div>
-        </Container>
+      </Container>
         
     </div>
   )

@@ -10,6 +10,11 @@ export default function AddressDetails () {
     const toCourseDetails = () => {
         navigate('/courseDetails')
     }
+
+    const toPersonalDetails = () => {
+        navigate('/personalDetails')
+    }
+
     const districtData = []
     
     return (
@@ -79,15 +84,15 @@ export default function AddressDetails () {
                 </div>
 
                 </Form>
-                <div className='button-container container'>
-                    <Row>
-                    <Col xs={{ span: 6, offset: 3 }} md={{ span: 3, offset: 6 }} className="d-flex justify-content-end">
-                        <button className='previous-box'>Back</button>
-                        </Col>
-                    <Col xs={{ span: 6 }} md={{ span: 3 }} className="d-flex justify-content-end">
-                        <button className='next-box' onClick={toCourseDetails}>Next</button>
-                        </Col>
-                    </Row>
+                <div className='pt-5 row'>
+                    <div className='col-md-3'></div>
+                    <div className='col-md-3'></div>
+                    <div className='col-md-3'>
+                    <button onClick={toPersonalDetails} className='previous-box'>Back</button>
+                    </div>
+                    <div className='col-md-3'>
+                    <button onClick={toCourseDetails} className='next-box'>Next</button>
+                    </div>
                 </div>
                 
             </Container>

@@ -10,6 +10,10 @@ export default function PersonalDetails () {
     const toAddressDetails = () => {
         navigate('/addressDetails')
     }
+
+    const toBasicDetails = () => {
+        navigate('/basicDetails')
+    }
     
     return (
         <div className='align-to-top box'>
@@ -17,7 +21,7 @@ export default function PersonalDetails () {
         <Form>
         <div className='heading-font row'>Personal Details</div>
         <div className='pb-5 row'>
-            <div className='col-sm-4'>
+            <div className='col-md-4 pt-5'>
                 <p className='font-400-16'>ID Type</p>
                 <select className='font-400-18 textfield' type="text">
                     <option selected disabled>ID Type</option>
@@ -26,24 +30,24 @@ export default function PersonalDetails () {
                     <option>Voter ID</option>
                 </select>
             </div>
-            <div className='col-sm-4'>
+            <div className='col-md-4 pt-5'>
             <p className='font-400-16'>ID Card No</p>
                 <input className='font-400-18 textfield' type="text" />
                 </div>
-            <div className='col-sm-4'>
+            <div className='col-md-4 pt-5'>
                 <p className='font-400-16'>Religion</p>
                 <select className='font-400-18 textfield' type="text">
                     <option selected disabled>Religion</option>
-                    <option>Hinduism</option>
+                    <option>Hinduimd</option>
                     <option>Islam</option>
-                    <option>Sikhism</option>
-                    <option>Jainism</option>
+                    <option>Sikhimd</option>
+                    <option>Jainimd</option>
                     <option>Christianity</option>
                 </select>
             </div>
         </div>
         <div className='pb-5 row'>
-            <div className='col-sm-4'>
+            <div className='col-md-4 pt-5'>
                 <p className='font-400-16'>Caste</p>
                 <select className='font-400-18 textfield' type="text">
                     <option selected disabled>Caste</option>
@@ -55,38 +59,38 @@ export default function PersonalDetails () {
                     <option>ST(P)</option>
                 </select>
             </div>
-            <div className='col-sm-4'>
-                <p className='font-400-16'>Are you a person wit disability</p>
+            <div className='col-md-4 pt-5'>
+                <p className='font-400-16'>Are you a person with disability</p>
                 <div className='row'>
-                    <div className='col-sm-2'>
+                    <div className='col-2'>
                         <input className="ellipse" type="radio" id="yes" name="fav_language" value="HTML" />
                     </div>
-                    <div className='col-sm-4'>
+                    <div className='col-4'>
                         <label for="yes">YES</label>
                     </div>
-                    <div className='col-sm-2'>
+                    <div className='col-2'>
                         <input className="ellipse" type="radio" id="no" name="fav_language" value="CSS" />
                     </div>    
-                    <div className='col-sm-4'>    
+                    <div className='col-4'>    
                         <label for="no">NO</label>
                     </div>
                 </div>
             </div>
-            <div className='col-sm-4'>
+            <div className='col-md-4 pt-5'>
             <p className='font-400-16'>If Yes, describe briefly</p>
                 <input className='font-400-18 textfield' type="text" />
             </div>
         </div>
         </Form>
-        <div className='button-container container'>
-            <Row>
-            <Col xs={{ span: 6, offset: 3 }} md={{ span: 3, offset: 6 }} className="d-flex justify-content-end">
-                <button className='previous-box'>Back</button>
-                </Col>
-            <Col xs={{ span: 6 }} md={{ span: 3 }} className="d-flex justify-content-end">
-                <button className='next-box' onClick={toAddressDetails}>Next</button>
-                </Col>
-            </Row>
+        <div className='pt-5 row'>
+            <div className='col-md-3'></div>
+            <div className='col-md-3'></div>
+            <div className='col-md-3'>
+              <button onClick={toBasicDetails} className='previous-box'>Back</button>
+            </div>
+            <div className='col-md-3'>
+              <button onClick={toAddressDetails} className='next-box'>Next</button>
+            </div>
         </div>
         
         </Container>
