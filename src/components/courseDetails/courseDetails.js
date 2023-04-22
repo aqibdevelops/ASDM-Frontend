@@ -1,28 +1,100 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './courseDetails.css'
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 
 function CourseDetails() {
 
-    const navigate = useNavigate()
+  const[coursePopup, setCoursePopup] = useState(false)
 
-    const toRelocationDetails =  () => {
-      navigate('/relocationDetails')
-    }
+  const navigate = useNavigate()
 
-    const toAddressDetails = () => {
-      navigate('/addressDetails')
-    }
+  const toRelocationDetails =  () => {
+    navigate('/relocationDetails')
+  }
+
+  const toAddressDetails = () => {
+    navigate('/addressDetails')
+  }
 
   return (
+    <>
+        {coursePopup ? 
+      <div>
+        <div className='transparent-wrap' style={{zIndex: 1}}>
+        </div>
+        <div className='popup-box' style={{zIndex: 2}}>
+          <div className='py-4 row'>
+            <div className='col-sm-1'></div>
+            <div className='box-font col-sm-6'>New Course</div>
+            <div className='col-sm-5'></div>
+          </div>
+          <div className='pb-5 row'>
+            <div className='col-md-1'></div>
+            <div className='col-md-4 pt-3'>
+              <p className='font-400-16'>District</p>
+              <select onChange={e => {sessionStorage.setItem("class", e.target.value)}} className='font-400-18 textfield' type="text" placeholder='Class'>
+                <option selected disabled>DISTRICT</option>
+                <option>KAMRUP</option>
+                <option>NAGAON</option>
+                <option>DIBRUGARH</option>
+              </select>
+            </div>
+          </div>
+          <div className='pb-5 row'>
+            <div className='col-md-1'></div>
+            <div className='col-md-4 pt-3'>
+              <p className='font-400-16'>Course Category</p>
+              <select onChange={e => {sessionStorage.setItem("class", e.target.value)}} className='font-400-18 textfield' type="text" placeholder='Class'>
+                <option selected disabled>COURSE CATEGORY</option>
+                <option>DOMAIN SKILLING</option>
+                <option>PLSDTP</option>
+                <option>RPL-JJM</option>
+              </select>
+            </div>
+          </div>
+          <div className='pb-5 row'>
+            <div className='col-md-1'></div>
+            <div className='col-md-4 pt-3'>
+              <p className='font-400-16'>Sector</p>
+              <select onChange={e => {sessionStorage.setItem("class", e.target.value)}} className='font-400-18 textfield' type="text" placeholder='Class'>
+                <option selected disabled>Sector</option>
+                <option>Beauty and Wellness</option>
+                <option>Automotive</option>
+                <option>Hydrocarbons</option>
+              </select>
+            </div>
+          </div>
+          <div className='pb-5 row'>
+            <div className='col-md-1'></div>
+            <div className='col-md-4 pt-3'>
+              <p className='font-400-16'>Course</p>
+              <select onChange={e => {sessionStorage.setItem("class", e.target.value)}} className='font-400-18 textfield' type="text" placeholder='Class'>
+                <option selected disabled>COURSE</option>
+                <option>Course 1</option>
+                <option>Course 2</option>
+                <option>Course 3</option>
+              </select>
+            </div>
+          </div>
+          <div className='pt-4 row'>
+            <div className='col-sm-2'></div>
+            <div className='col-sm-4'>
+              <button onClick={e => setCoursePopup(false)} className='previous-box'>Close</button>
+            </div>
+            <div className='col-sm-4'>
+              <button onClick={e => setCoursePopup(false)} className='next-box'>Add</button>
+            </div>
+            <div className='col-sm-2'></div>
+          </div>
+        </div>
+      </div> : <div /> }
     <div className='align-to-top box'>
         <Container>
-        <Form>
             <div className='heading-font row'>Course Details</div>
             <div className='table-padding row'>
                 <div className='col-sm-3'>
-                    <button className='new-course-button'>New Course</button>
+                    <button onClick={e => setCoursePopup(true) } className='new-course-button'>New Course</button>
                 </div>
             </div>
             <div className='table-font row'>
@@ -33,11 +105,10 @@ function CourseDetails() {
                     </tr>
                     
                     <tr>
-                        <td>1</td>
+                        <td></td>
                     </tr>
                 </table>
             </div>
-        </Form>
       <div className='pt-5 row'>
         <div className='col-md-3'></div>
         <div className='col-md-3'></div>
@@ -51,6 +122,7 @@ function CourseDetails() {
       </Container>
         
     </div>
+    </>
   )
 }
 
