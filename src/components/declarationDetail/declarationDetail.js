@@ -3,6 +3,7 @@ import { Form, Row, Col, Button } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
 import '../relocationDetails/relocationDetails.css'
 import './declarationDetail.css'
+import axios from 'axios'
 
 export default function DeclarationDetail() {
 
@@ -10,8 +11,150 @@ export default function DeclarationDetail() {
 
   const navigate = useNavigate()
 
-  const toSuccessPage = () => {
-    navigate('/success')
+  const toSuccessPage = async () => {
+    await axios.post("http://127.0.0.1:7012/app1/v1/PublicServer/registrati8/save", {
+        "postParam": {
+          "obj": {
+            "address": "dfsdf",
+            "assemblyId": 81,
+            "categoryId": 5,
+            "configArr": {
+              "asemblyConstituncyMandatory": 0,
+              "counsilConstitutionMandatory": 1,
+              "courseMandatory": 1,
+              "districtMandatory": 1,
+              "isDistrictSearchIsAllow": 0,
+              "maxDOB": 46,
+              "maxSectorPreferenceAllow": 3,
+              "minDOB": 18,
+              "minSectorPreferenceAllow": 1,
+              "policeStationMandatory": 1,
+              "postOfficeMandatory": 1,
+              "sectorMandatory": 1,
+              "talukaMandatory": 1,
+              "tehsilMandatory": 0,
+              "viewAssesmblyConstitution": 1,
+              "viewCounsilConstitution": 1,
+              "viewDistrictPreference": 1,
+              "viewPoliceStation": 1,
+              "viewPostOffice": 1,
+              "viewSectorPreference": 1,
+              "viewTalukaPreference": 0,
+              "viewTeaTribe": 1,
+              "viewTehsil": 1
+            },
+            "contactVerification": {
+              "email1Verified": null,
+              "enteredMobile1OTP": sessionStorage.getItem("OTP"),
+              "insertedId": sessionStorage.getItem("insertedId"),
+              "mobile1": sessionStorage.getItem("MobileNo"),
+              "mobile1OTP": sessionStorage.getItem("otpBackend"),
+              "mobile1Verified": true
+            },
+            "councilId": 10,
+            "countryId": 97,
+            "currentAddressSameAsPermanentAddress": 1,
+            "declarationAccept": true,
+            "disability": 1,
+            "districtId": 367,
+            "dob": "15/06/1999",
+            "fatherName": sessionStorage.getItem("fathersName"),
+            "firstName": sessionStorage.getItem("firstName"),
+            "genderName": 1,
+            "idNumber": sessionStorage.getItem("IdCardNo"),
+            "idType": 1,
+            "isAntodayaCardHolder": 0,
+            "isBocw": 0,
+            "isBPLCardHolder": 0,
+            "isMinority": 0,
+            "isNregaCardHolder": 0,
+            "isTeaTribe": 0,
+            "isWillingDistrict": 0,
+            "isWillingState": 0,
+            "jvId": "14",
+            "lastName": sessionStorage.getItem("lastName"),
+            "mobile1": sessionStorage.getItem("MobileNo"),
+            "motherName": sessionStorage.getItem("mothersName"),
+            "pin": sessionStorage.getItem("Pincode"),
+            "placeName": "GHY",
+            "policeStation": sessionStorage.getItem("PS"),
+            "postOffice": sessionStorage.getItem("PO"),
+            "Preference": [
+              true,
+              true,
+              true
+            ],
+            "preferenceArr": [
+              {
+                "interestedCourseCategoryId": 1,
+                "interestedCourseId": 150,
+                "interestedDistrictId": 1124,
+                "interestedSectorId": 14,
+                "interestedTalukaId": null,
+                "sNo": 0
+              },
+              {
+                "interestedCourseCategoryId": 1,
+                "interestedCourseId": 290,
+                "interestedDistrictId": 1124,
+                "interestedSectorId": 14,
+                "interestedTalukaId": null,
+                "sNo": 1
+              },
+              {
+                "interestedCourseCategoryId": 1,
+                "interestedCourseId": 129,
+                "interestedDistrictId": 1124,
+                "interestedSectorId": 1,
+                "interestedTalukaId": null,
+                "sNo": 2
+              }
+            ],
+            "preferenceDist1": "",
+            "preferenceDist2": "",
+            "preferenceDist3": "",
+            "preferenceState1": "",
+            "preferenceState2": "",
+            "preferenceState3": "",
+            "qualificationId": 10,
+            "religionId": 1,
+            "sectorCourseDetails": [],
+            "selectedPreferenceArr": [
+              {
+                "interestedCourseCategoryId": 1,
+                "interestedCourseId": 150,
+                "interestedDistrictId": 1124,
+                "interestedSectorId": 14,
+                "interestedTalukaId": null,
+                "sNo": 0
+              },
+              {
+                "interestedCourseCategoryId": 1,
+                "interestedCourseId": 290,
+                "interestedDistrictId": 1124,
+                "interestedSectorId": 14,
+                "interestedTalukaId": null,
+                "sNo": 1
+              },
+              {
+                "interestedCourseCategoryId": 1,
+                "interestedCourseId": 129,
+                "interestedDistrictId": 1124,
+                "interestedSectorId": 1,
+                "interestedTalukaId": null,
+                "sNo": 2
+              }
+            ],
+            "stateId": 4,
+            "ulbId": 21,
+            "urban": 1
+          }
+        }
+    }).then((response) => {
+        navigate('/success')
+        sessionStorage.setItem("success_message", response.data.message)
+        console.log(response)
+    })
   }
 
   const [declarationCheck, setDeclarationCheck] = useState(false)

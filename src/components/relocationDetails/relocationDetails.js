@@ -6,6 +6,8 @@ import './relocationDetails.css'
 export default function RelocationDetail() {
 
   const[relocationDistrict, setRelocationDistrict] = useState(false)
+  const[relocationState, setRelocationState] = useState(false)
+  const[relocationIndia, setRelocationIndia] = useState(false)
 
   const navigate = useNavigate()
 
@@ -26,16 +28,16 @@ export default function RelocationDetail() {
               <p className='font-400-16'>Willing to work outside District</p>
               <div className='row'>
                 <div className='col-sm-2'>
-                    <input className="ellipse" type="radio" id="yes" name="fav_language" value="HTML" />
+                    <input onChange={e => setRelocationDistrict(true)} className="ellipse" type="radio" id="dist_yes" name="dist" />
                 </div>
                 <div className='col-sm-4'>
-                    <label for="yes">YES</label>
+                    <label for="dist_yes">YES</label>
                 </div>
                 <div className='col-sm-2'>
-                    <input className="ellipse" type="radio" id="no" name="fav_language" value="CSS" />
+                    <input onChange={e => setRelocationDistrict(false)} className="ellipse" type="radio" id="dist_no" name="dist" />
                 </div>    
                 <div className='col-sm-4'>    
-                    <label for="no">NO</label>
+                    <label for="dist_no">NO</label>
                 </div>
               </div>
             </div>
@@ -43,16 +45,16 @@ export default function RelocationDetail() {
               <p className='font-400-16'>Willing to work outside State</p>
               <div className='row'>
                 <div className='col-sm-2'>
-                    <input className="ellipse" type="radio" id="yes" name="fav_language" value="HTML" />
+                    <input onChange={e => setRelocationState(true)} className="ellipse" type="radio" id="state_yes" name="state" />
                 </div>
                 <div className='col-sm-4'>
-                    <label for="yes">YES</label>
+                    <label for="state_yes">YES</label>
                 </div>
                 <div className='col-sm-2'>
-                    <input className="ellipse" type="radio" id="no" name="fav_language" value="CSS" />
+                    <input onChange={e => setRelocationState(false)} className="ellipse" type="radio" id="state_no" name="state" />
                 </div>    
                 <div className='col-sm-4'>    
-                    <label for="no">NO</label>
+                    <label for="state_no">NO</label>
                 </div>
               </div>
             </div>
@@ -60,24 +62,24 @@ export default function RelocationDetail() {
               <p className='font-400-16'>Willing to work outside India</p>
               <div className='row'>
                 <div className='col-sm-2'>
-                    <input className="ellipse" type="radio" id="yes" name="fav_language" value="HTML" />
+                    <input onChange={e => setRelocationIndia(true)} className="ellipse" type="radio" id="india_yes" name="india" />
                 </div>
                 <div className='col-sm-4'>
-                    <label for="yes">YES</label>
+                    <label for="india_yes">YES</label>
                 </div>
                 <div className='col-sm-2'>
-                    <input className="ellipse" type="radio" id="no" name="fav_language" value="CSS" />
+                    <input onChange={e => setRelocationIndia(false)} className="ellipse" type="radio" id="india_no" name="india" />
                 </div>    
                 <div className='col-sm-4'>    
-                    <label for="no">NO</label>
+                    <label for="india_no">NO</label>
                 </div>
               </div>
             </div>
           </div>
-          <div className='pb-5 row'>
+          {relocationDistrict ? <div className='pb-5 row'>
             <div className='col-sm-4 pb-5'>
-              <p className='font-400-16'>District Preferance 1</p>
-              <select className='font-400-18 textfield' type="text">
+              <p className='font-400-16'>District&nbsp;Preferance&nbsp;1</p>
+              <select onChange={e => sessionStorage.setItem("dist_pref_1", e.target.value)} className='font-400-18 textfield' type="text">
                   <option selected disabled>District Preferance 1</option>
                   <option>Kamrup</option>
                   <option>Nagaon</option>
@@ -86,34 +88,46 @@ export default function RelocationDetail() {
                   <option>Barpeta</option>
               </select>
             </div>
-            <div className='col-sm-4'>
-            <p className='font-400-16'>State Preferance 1</p>
-            <select className='font-400-18 textfield' type="text">
-                <option selected disabled>State Preferance 1</option>
-                <option>Kamrup</option>
-                <option>Nagaon</option>
-                <option>Dibrugarh</option>
-                <option>Silchar</option>
-                <option>Barpeta</option>
-            </select>
-          </div>
-          <div className='col-sm-4'></div>
-          </div>
-          <div className='pb-5 row'>
             <div className='col-sm-4 pb-5'>
-                <p className='font-400-16'>District Preferance 2</p>
-                <select className='font-400-18 textfield' type="text">
-                    <option selected disabled>District Preferance 2</option>
+              <p className='font-400-16'>District&nbsp;Preferance&nbsp;2</p>
+              <select onChange={e => sessionStorage.setItem("dist_pref_2", e.target.value)} className='font-400-18 textfield' type="text">
+                  <option selected disabled>District Preferance 2</option>
+                  <option>Kamrup</option>
+                  <option>Nagaon</option>
+                  <option>Dibrugarh</option>
+                  <option>Silchar</option>
+                  <option>Barpeta</option>
+              </select>
+            </div>
+          <div className='col-sm-4'>
+            <div className='col-sm-4 pb-5'>
+              <p className='font-400-16'>District&nbsp;Preferance&nbsp;3</p>
+              <select onChange={e => sessionStorage.setItem("dist_pref_3", e.target.value)} className='font-400-18 textfield' type="text">
+                  <option selected disabled>District Preferance 3</option>
+                  <option>Kamrup</option>
+                  <option>Nagaon</option>
+                  <option>Dibrugarh</option>
+                  <option>Silchar</option>
+                  <option>Barpeta</option>
+              </select>
+            </div>
+          </div>
+          </div> : <div /> }
+          {relocationState ? <div className='pb-5 row'>
+            <div className='col-sm-4 pb-5'>
+                <p className='font-400-16'>State&nbsp;Preferance&nbsp;1</p>
+                <select onChange={e => sessionStorage.setItem("state_pref_1", e.target.value)} className='font-400-18 textfield' type="text">
+                    <option selected disabled>District Preferance 1</option>
                     <option>Kamrup</option>
                     <option>Nagaon</option>
                     <option>Dibrugarh</option>
                     <option>Silchar</option>
                     <option>Barpeta</option>
                 </select>
-              </div>
-              <div className='col-sm-4'>
-              <p className='font-400-16'>State Preferance 2</p>
-              <select className='font-400-18 textfield' type="text">
+            </div>
+            <div className='col-sm-4'>
+              <p className='font-400-16'>State&nbsp;Preferance&nbsp;2</p>
+              <select onChange={e => sessionStorage.setItem("state_pref_2", e.target.value)}  className='font-400-18 textfield' type="text">
                   <option selected disabled>State Preferance 2</option>
                   <option>Kamrup</option>
                   <option>Nagaon</option>
@@ -122,13 +136,11 @@ export default function RelocationDetail() {
                   <option>Barpeta</option>
               </select>
             </div>
-            <div className='col-sm-4'></div>
-            </div>
-          <div className='pb-5 row'>
-            <div className='col-sm-4 pb-5'>
-                <p className='font-400-16'>District Preferance 3</p>
-                <select className='font-400-18 textfield' type="text">
-                    <option selected disabled>District Preferance 3</option>
+            <div className='col-sm-4'>
+              <div className='col-sm-4'>
+                <p className='font-400-16'>State&nbsp;Preferance&nbsp;3</p>
+                <select onChange={e => sessionStorage.setItem("state_pref_3", e.target.value)} className='font-400-18 textfield' type="text">
+                    <option selected disabled>State Preferance 3</option>
                     <option>Kamrup</option>
                     <option>Nagaon</option>
                     <option>Dibrugarh</option>
@@ -136,19 +148,8 @@ export default function RelocationDetail() {
                     <option>Barpeta</option>
                 </select>
               </div>
-              <div className='col-sm-4 pb-5'>
-              <p className='font-400-16'>State Preferance 3</p>
-              <select className='font-400-18 textfield' type="text">
-                  <option selected disabled>State Preferance 3</option>
-                  <option>Kamrup</option>
-                  <option>Nagaon</option>
-                  <option>Dibrugarh</option>
-                  <option>Silchar</option>
-                  <option>Barpeta</option>
-              </select>
             </div>
-            <div className='col-sm-4'></div>
-          </div>
+          </div> : <div /> }
           <div className='pt-5 row'>
             <div className='col-md-3'></div>
             <div className='col-md-3'></div>

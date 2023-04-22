@@ -1,0 +1,42 @@
+{
+
+  "TestingConfig": {
+	"varA":0.6
+
+  },
+
+  "databaseNoSql": {
+    "connectionString" : "mongodb://10.2.10.160:27017/Template_DB"
+  },
+
+  "emailGateway": {
+    "path" : "http://127.0.0.1:8002"
+  },
+
+  "linkVerificationExpiryDate":{
+    "days":2
+  },
+
+  "passwordResetURL": {
+    "path" : "http://localhost:3000/#/changePassword/"
+  },
+
+  "logger": {
+    "level":"error"
+  },
+  "user.email":"Please enter valid email address",
+
+  "environment":"development",
+  "port":7012,
+  "host": "127.0.0.1",
+  "applicationVersion":"app1",
+  "databaseMYSQL": {
+      "host": "10.2.10.221",
+      "port": "ds",
+      "user": "root",
+      "password": "root",
+      "database": "asdm-ds",
+      "connectionLimit" : 300,
+      "acquireTimeout":60000
+  }
+}
