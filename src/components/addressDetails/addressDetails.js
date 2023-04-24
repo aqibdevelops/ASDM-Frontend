@@ -27,13 +27,13 @@ export default function AddressDetails () {
                 <div className='pb-5 row'>
                     <div className='col-sm-4'>
                     <div className='col-sm-4'>
-                        <p className='font-400-16'>House no.</p>
+                        <p className='font-400-16'>House&nbsp;no.</p>
                         <input onChange={e => {sessionStorage.setItem("HouseNo", e.target.value)}} className='font-400-18 textfield' type="text" placeholder='House no' />
                     </div>
                     </div>
                     <div className='col-sm-8'>
-                        <p className='font-400-16'>Street Name</p>
-                        <input onChange={e => {sessionStorage.setItem("StreetName", e.target.value)}} className='font-400-18 textfield-2x' type="text" placeholder='Street Name' />
+                        <p className='font-400-16'>Street&nbsp;Name</p>
+                        <input onChange={e => {sessionStorage.setItem("StreetName", e.target.value)}} className='font-400-18 textfield' type="text" placeholder='Street Name' />
                     </div>
                 </div>
                 <div className='pb-5 row'>
@@ -43,19 +43,19 @@ export default function AddressDetails () {
                             <div className='col-sm-2'>
                                 <input onChange={e => {sessionStorage.setItem("BoolCityVill", "Yes")}} className="ellipse" type="radio" id="yes" name="fav_language" value="HTML" />
                             </div>
-                            <div className='col-sm-4'>
+                            <div className='col-sm-4 ps-5 pt-1'>
                                 <label for="yes">YES</label>
                             </div>
                             <div className='col-sm-2'>
                                 <input onChange={e => {sessionStorage.setItem("BoolCityVill", "No")}} className="ellipse" type="radio" id="no" name="fav_language" value="CSS" />
                             </div>    
-                            <div className='col-sm-4'>    
+                            <div className='col-sm-4 ps-5 pt-1'>    
                                 <label for="no">NO</label>
                             </div>
                         </div>
                     </div>
                     <div className='col-sm-4'>
-                        <p className='font-400-16'>City/Village Name</p>
+                        <p className='font-400-16'>City/Village</p>
                         <input onChange={e => {sessionStorage.setItem("CityVillageName", e.target.value)}} className='font-400-18 textfield' type="text" placeholder='City/Village Name' />
                     </div>
                     <div className='col-sm-4'>
@@ -85,12 +85,12 @@ export default function AddressDetails () {
 
                 </Form>
                 <div className='pt-5 row'>
-                    <div className='col-md-3'></div>
-                    <div className='col-md-3'></div>
-                    <div className='col-md-3'>
+                    <div className='col-sm-3'></div>
+                    <div className='col-sm-3'></div>
+                    <div className='col-sm-3'>
                     <button onClick={toPersonalDetails} className='previous-box'>Back</button>
                     </div>
-                    <div className='col-md-3'>
+                    <div className='col-sm-3'>
                     <button onClick={toCourseDetails} className='next-box'>Next</button>
                     </div>
                 </div>

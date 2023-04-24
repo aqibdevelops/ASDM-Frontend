@@ -144,7 +144,7 @@ let query = {
 	? , ? , ? , ? , ? ,
 	? , ? , ? , ? ,
 	? , ?, ?)`,
-	updateNotificationStatus: `UPDATE nw_candidate_basic_dtl basic SET basic.bSMSSent = ?,basic.bMailSent = ?,basic.vsReferenceNumber = ? WHERE basic.pklCandidateId = ?`,
+	updateNotificationStatus: `UPDATE nw_candidate_basic_dtl basic SET basic.bSMSSent = ?,basic.vsReferenceNumber = ? WHERE basic.pklCandidateId = ?`,
 	/*********************************************************************************************/
 	getDistrictName: "SELECT district.vsDistrictName AS districtName FROM nw_mams_district district WHERE district.pklDistrictId IN (?) ORDER BY district.pklDistrictId",
 	/*********************************************************************************************/

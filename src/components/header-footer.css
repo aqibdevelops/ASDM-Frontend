@@ -12,6 +12,8 @@
     line-height: 48px;
     text-align: center;
     color: #FFFFFF;
+    z-index: 0;
+    
 }
 
 .header-style {
@@ -21,6 +23,7 @@
     left: 0px;
     top: 0; 
     background: #05445E;
+    z-index: 1;
 }
 
 .photo {

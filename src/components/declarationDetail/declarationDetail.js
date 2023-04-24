@@ -55,7 +55,7 @@ export default function DeclarationDetail() {
             "countryId": 97,
             "currentAddressSameAsPermanentAddress": 1,
             "declarationAccept": true,
-            "disability": sessionStorage.getItem("Disbility"),
+            "disability": 0,
             "districtId": sessionStorage.getItem("DistrictName"),
             "dob": sessionStorage.getItem("dateOfBirth"),
             "fatherName": sessionStorage.getItem("fathersName"),
@@ -84,32 +84,7 @@ export default function DeclarationDetail() {
               true,
               true
             ],
-            "preferenceArr": [
-              {
-                "interestedCourseCategoryId": 1,
-                "interestedCourseId": 150,
-                "interestedDistrictId": 1124,
-                "interestedSectorId": 14,
-                "interestedTalukaId": null,
-                "sNo": 0
-              },
-              {
-                "interestedCourseCategoryId": 1,
-                "interestedCourseId": 290,
-                "interestedDistrictId": 1124,
-                "interestedSectorId": 14,
-                "interestedTalukaId": null,
-                "sNo": 1
-              },
-              {
-                "interestedCourseCategoryId": 1,
-                "interestedCourseId": 129,
-                "interestedDistrictId": 1124,
-                "interestedSectorId": 1,
-                "interestedTalukaId": null,
-                "sNo": 2
-              }
-            ],
+            "preferenceArr": JSON.parse(sessionStorage.getItem("preferanceArr")),
             "preferenceDist1": "",
             "preferenceDist2": "",
             "preferenceDist3": "",
@@ -119,32 +94,7 @@ export default function DeclarationDetail() {
             "qualificationId": 10,
             "religionId": sessionStorage.getItem("Religion"),
             "sectorCourseDetails": [],
-            "selectedPreferenceArr": [
-              {
-                "interestedCourseCategoryId": 1,
-                "interestedCourseId": 150,
-                "interestedDistrictId": 1124,
-                "interestedSectorId": 14,
-                "interestedTalukaId": null,
-                "sNo": 0
-              },
-              {
-                "interestedCourseCategoryId": 1,
-                "interestedCourseId": 290,
-                "interestedDistrictId": 1124,
-                "interestedSectorId": 14,
-                "interestedTalukaId": null,
-                "sNo": 1
-              },
-              {
-                "interestedCourseCategoryId": 1,
-                "interestedCourseId": 129,
-                "interestedDistrictId": 1124,
-                "interestedSectorId": 1,
-                "interestedTalukaId": null,
-                "sNo": 2
-              }
-            ],
+            "selectedPreferenceArr": JSON.parse(sessionStorage.getItem("preferanceArr")),
             "stateId": 4,
             "ulbId": 21,
             "urban": 1
