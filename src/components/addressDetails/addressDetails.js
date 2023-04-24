@@ -15,6 +15,8 @@ export default function AddressDetails () {
         navigate('/personalDetails')
     }
 
+    const initdata = JSON.parse(sessionStorage.getItem("initializationObject"))
+
     const districtData = []
     
     return (
@@ -59,12 +61,10 @@ export default function AddressDetails () {
                     <div className='col-sm-4'>
                         <p className='font-400-16'>District</p>
                         <select onChange={e => {sessionStorage.setItem("DistrictName", e.target.value)}} className='font-400-18 textfield' type="text">
-                            <option selected disabled>District</option>
-                            <option>Kamrup</option>
-                            <option>Nagaon</option>
-                            <option>Dibrugarh</option>
-                            <option>Silchar</option>
-                            <option>Barpeta</option>
+                        <option selected disabled>DISTRICT</option>
+                        {initdata.data.districtArr.map((s)=>(
+                        <option value={s.districtId}>{s.districtName}</option>
+                        ))}
                         </select>
                     </div>
                 </div>

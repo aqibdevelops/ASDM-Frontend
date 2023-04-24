@@ -2,10 +2,11 @@ import React, { useState } from 'react'
 import './courseDetails.css'
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-
+import axios from 'axios';
 function CourseDetails() {
 
   const[coursePopup, setCoursePopup] = useState(false)
+  const[sectorNameDB, setSectorNameDB] = useState([""])
 
   const navigate = useNavigate()
 
@@ -16,6 +17,20 @@ function CourseDetails() {
   const toAddressDetails = () => {
     navigate('/addressDetails')
   }
+
+  const sector = async () => {
+    await axios.post("http://127.0.0.1:7012/app1/v1/PublicServer/registrati8/sector", {
+      "postParam": {
+        "jvId": 14,
+        "courseCategoryId": sessionStorage.getItem("interestedCategory")
+      }
+    })
+    .then((response) => {
+      setSectorNameDB(response.objArr)
+    })
+  }
+
+  const initdata = JSON.parse(sessionStorage.getItem("initializationObject"))
 
   return (
     <>
@@ -33,11 +48,11 @@ function CourseDetails() {
             <div className='col-md-1'></div>
             <div className='col-md-4 pt-3'>
               <p className='font-400-16'>District</p>
-              <select onChange={e => {sessionStorage.setItem("class", e.target.value)}} className='font-400-18 textfield' type="text" placeholder='Class'>
+              <select onChange={e => {sector(); sessionStorage.setItem("interestedDistrict", e.target.value)}} className='font-400-18 textfield' type="text" placeholder='Class'>
                 <option selected disabled>DISTRICT</option>
-                <option>KAMRUP</option>
-                <option>NAGAON</option>
-                <option>DIBRUGARH</option>
+                {initdata.data.districtArr.map((s)=>(
+                <option value={s.districtId}>{s.districtName}</option>
+                ))}
               </select>
             </div>
           </div>
@@ -45,11 +60,11 @@ function CourseDetails() {
             <div className='col-md-1'></div>
             <div className='col-md-4 pt-3'>
               <p className='font-400-16'>Course Category</p>
-              <select onChange={e => {sessionStorage.setItem("class", e.target.value)}} className='font-400-18 textfield' type="text" placeholder='Class'>
+              <select onChange={e => {sector(); sessionStorage.setItem("interestedCategory", e.target.value)}} className='font-400-18 textfield' type="text" placeholder='Class'>
                 <option selected disabled>COURSE CATEGORY</option>
-                <option>DOMAIN SKILLING</option>
-                <option>PLSDTP</option>
-                <option>RPL-JJM</option>
+                {initdata.data.courseCategoryArr.map((s)=>(
+                <option value={s.courseCategoryId}>{s.courseCategoryName}</option>
+                ))}
               </select>
             </div>
           </div>
@@ -57,11 +72,11 @@ function CourseDetails() {
             <div className='col-md-1'></div>
             <div className='col-md-4 pt-3'>
               <p className='font-400-16'>Sector</p>
-              <select onChange={e => {sessionStorage.setItem("class", e.target.value)}} className='font-400-18 textfield' type="text" placeholder='Class'>
+              <select onChange={e => {sessionStorage.setItem("interestedSector", e.target.value)}} className='font-400-18 textfield' type="text" placeholder='Class'>
                 <option selected disabled>Sector</option>
-                <option>Beauty and Wellness</option>
-                <option>Automotive</option>
-                <option>Hydrocarbons</option>
+                  {sectorNameDB.map((s) => (
+                    <option value={s.sectorId}>{s.sectorName}</option>
+                  ))}
               </select>
             </div>
           </div>
@@ -69,7 +84,7 @@ function CourseDetails() {
             <div className='col-md-1'></div>
             <div className='col-md-4 pt-3'>
               <p className='font-400-16'>Course</p>
-              <select onChange={e => {sessionStorage.setItem("class", e.target.value)}} className='font-400-18 textfield' type="text" placeholder='Class'>
+              <select onChange={e => {sessionStorage.setItem("interestedCourse", e.target.value)}} className='font-400-18 textfield' type="text" placeholder='Class'>
                 <option selected disabled>COURSE</option>
                 <option>Course 1</option>
                 <option>Course 2</option>

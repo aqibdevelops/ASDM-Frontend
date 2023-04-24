@@ -18,7 +18,7 @@ function BasicDetails() {
     navigate('/personalDetails')
   }
 
-
+  const initdata = JSON.parse(sessionStorage.getItem("initializationObject"))
 
   return (
     <div className='align-to-top font-600 box'>
@@ -77,10 +77,9 @@ function BasicDetails() {
         <div className='col-md-4 pt-5'>
           <p className='font-400-16'>Gender</p>
           <select onChange={e => {sessionStorage.setItem("gender", e.target.value)}} className='font-400-18 textfield' type="text">
-            <option selected disabled>Gender</option>
-            <option>Male</option>
-            <option>Female</option>
-            <option>Others</option>
+            {initdata.data.genderArr.map((s)=>(
+              <option value={s.genderId}>{s.genderName}</option>
+            ))}
           </select>
         </div>
       </div>

@@ -15,9 +15,9 @@ export default function DeclarationDetail() {
     await axios.post("http://127.0.0.1:7012/app1/v1/PublicServer/registrati8/save", {
         "postParam": {
           "obj": {
-            "address": "dfsdf",
+            "address": sessionStorage.getItem("HouseNo")+sessionStorage.getItem("StreetName"),
             "assemblyId": 81,
-            "categoryId": 5,
+            "categoryId": sessionStorage.getItem("Caste"),
             "configArr": {
               "asemblyConstituncyMandatory": 0,
               "counsilConstitutionMandatory": 1,
@@ -55,14 +55,14 @@ export default function DeclarationDetail() {
             "countryId": 97,
             "currentAddressSameAsPermanentAddress": 1,
             "declarationAccept": true,
-            "disability": 1,
-            "districtId": 367,
-            "dob": "15/06/1999",
+            "disability": sessionStorage.getItem("Disbility"),
+            "districtId": sessionStorage.getItem("DistrictName"),
+            "dob": sessionStorage.getItem("dateOfBirth"),
             "fatherName": sessionStorage.getItem("fathersName"),
             "firstName": sessionStorage.getItem("firstName"),
-            "genderName": 1,
+            "genderName": sessionStorage.getItem("gender"),
             "idNumber": sessionStorage.getItem("IdCardNo"),
-            "idType": 1,
+            "idType": sessionStorage.getItem("IdType"),
             "isAntodayaCardHolder": 0,
             "isBocw": 0,
             "isBPLCardHolder": 0,
@@ -76,7 +76,7 @@ export default function DeclarationDetail() {
             "mobile1": sessionStorage.getItem("MobileNo"),
             "motherName": sessionStorage.getItem("mothersName"),
             "pin": sessionStorage.getItem("Pincode"),
-            "placeName": "GHY",
+            "placeName": sessionStorage.getItem("CityVillageName"),
             "policeStation": sessionStorage.getItem("PS"),
             "postOffice": sessionStorage.getItem("PO"),
             "Preference": [
@@ -117,7 +117,7 @@ export default function DeclarationDetail() {
             "preferenceState2": "",
             "preferenceState3": "",
             "qualificationId": 10,
-            "religionId": 1,
+            "religionId": sessionStorage.getItem("Religion"),
             "sectorCourseDetails": [],
             "selectedPreferenceArr": [
               {
