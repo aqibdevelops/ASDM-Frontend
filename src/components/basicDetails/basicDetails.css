@@ -54,6 +54,15 @@
     .box{
         width: 60vw;
     }
+    .textfield {
+        width: 80%;
+    }
+}
+
+@media(max-width: 768px) {
+    .textfield {
+        width: 80% !important;
+    }
 }
 
 .button-container {

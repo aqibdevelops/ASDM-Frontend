@@ -2,9 +2,10 @@ body{
     font-family: 'Coming Soon', sans-serif;
     color: #D4F1F4;
 }
+
 .wrapper {
     display: flex;
-
+    height: 76.5vh;
 }
 
 .side-section {
@@ -14,7 +15,6 @@ body{
     bottom: 0;
     left: 0;
     right: 0;
-
 }
 
 

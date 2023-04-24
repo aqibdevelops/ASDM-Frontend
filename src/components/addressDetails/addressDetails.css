@@ -5,39 +5,61 @@
 
 }
 
-.ellipse{
+.ellipse {
 
-box-sizing: border-box;
-/* position: absolute; */
-width: 30px;
-height: 30px;
-background: #D4F1F4;
-border: 1px solid #05445E;
+    box-sizing: border-box;
+    /* position: absolute; */
+    width: 30px;
+    height: 30px;
+    background: #D4F1F4;
+    border: 1px solid #05445E;
 }
 
 .textfield {
     box-sizing: border-box;
 
     position: absolute;
-    width: 280px;
+    /* width: 20% !important; */
     height: 33px;
-    
+
     background: #D4F1F4;
     border: 1px solid #05445E;
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    .textfield {
+        width: 160px !important;
+    }
+
+    .textfield-2x {
+        width: 340px !important;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .textfield-2x {
+        width: 80% !important;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .pt-5 {
+        padding-top: 0px !important;
+    }
 }
 
 .textfield-2x {
     box-sizing: border-box;
 
     position: absolute;
-    width: 585px;
+    width: 38vw;
     height: 33px;
-    
+
     background: #D4F1F4;
     border: 1px solid #05445E;
 }
 
-.font-600{
+.font-600 {
     font-family: Inter;
     font-size: 32px;
     font-weight: 600;
@@ -46,7 +68,7 @@ border: 1px solid #05445E;
 
 }
 
-.font-400-16{
+.font-400-16 {
     font-family: Inter;
     font-size: 16px;
     font-weight: 400;
@@ -56,7 +78,7 @@ border: 1px solid #05445E;
 
 }
 
-.font-400-18{
+.font-400-18 {
     font-family: Inter;
     font-size: 20px;
     font-weight: 400;
@@ -68,7 +90,7 @@ border: 1px solid #05445E;
 
 
 @media(min-width: 768px) {
-    .box{
+    .box {
         width: 60vw;
     }
 }

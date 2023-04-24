@@ -80,9 +80,9 @@ export default function PersonalDetails () {
         </div>
         </Form>
         <div className='pt-5 row'>
-            <div className='col-md-3'></div>
-            <div className='col-md-3'></div>
-            <div className='col-md-3'>
+            {/* <div className='col-md-3'></div>
+            <div className='col-md-3'></div> */}
+            <div className='col-md-2'>
               <button onClick={toBasicDetails} className='previous-box'>Back</button>
             </div>
             <div className='col-md-3'>
