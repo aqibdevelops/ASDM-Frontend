@@ -27,7 +27,7 @@
         "port": "3306",
         "user": "root",
         "password": "password",
-        "database": "ds",
+        "database": "dt",
         "connectionLimit": 300,
         "acquireTimeout": 60000
     }

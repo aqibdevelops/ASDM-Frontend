@@ -28,12 +28,12 @@ export default function AddressDetails () {
                     <div className='col-sm-4'>
                     <div className='col-sm-4'>
                         <p className='font-400-16'>House&nbsp;no.</p>
-                        <input onChange={e => {sessionStorage.setItem("HouseNo", e.target.value)}} className='font-400-18 textfield' type="text" placeholder='House no' />
+                        <input onChange={e => {sessionStorage.setItem("HouseNo", e.target.value)}} className='font-400-18 textfield textarea' type="text" placeholder='House no' />
                     </div>
                     </div>
-                    <div className='col-sm-8 pt-5'>
+                    <div className='col-sm-8 pt-5 pt-sm-0'>
                         <p className='font-400-16'>Street&nbsp;Name</p>
-                        <input onChange={e => {sessionStorage.setItem("StreetName", e.target.value)}} className='font-400-18 textfield-2x' type="text" placeholder='Street Name' />
+                        <input onChange={e => {sessionStorage.setItem("StreetName", e.target.value)}} className='font-400-18 textfield-2x textarea' type="text" placeholder='Street Name' />
                     </div>
                 </div>
                 <div className='pb-5 row'>
@@ -43,24 +43,24 @@ export default function AddressDetails () {
                             <div className='col-sm-2'>
                                 <input onChange={e => {sessionStorage.setItem("BoolCityVill", "Yes")}} className="ellipse" type="radio" id="yes" name="fav_language" value="HTML" />
                             </div>
-                            <div className='col-sm-4 ps-xs-5 pt-1'>
+                            <div className='col-sm-4 ps-5 pt-1'>
                                 <label for="yes">YES</label>
                             </div>
-                            <div className='col-sm-2'>
+                            <div className='col-sm-2 pt-2'>
                                 <input onChange={e => {sessionStorage.setItem("BoolCityVill", "No")}} className="ellipse" type="radio" id="no" name="fav_language" value="CSS" />
                             </div>    
-                            <div className='col-sm-4 ps-xs-5 pt-1'>    
+                            <div className='col-sm-4 ps-5 pt-1'>    
                                 <label for="no">NO</label>
                             </div>
                         </div>
                     </div>
-                    <div className='col-sm-4'>
+                    <div className='col-sm-4 pt-3 pt-sm-0'>
                         <p className='font-400-16'>City/Village</p>
-                        <input onChange={e => {sessionStorage.setItem("CityVillageName", e.target.value)}} className='font-400-18 textfield' type="text" placeholder='City/Village Name' />
+                        <input onChange={e => {sessionStorage.setItem("CityVillageName", e.target.value)}} className='font-400-18 textfield textarea' type="text" placeholder='City/Village Name' />
                     </div>
-                    <div className='col-sm-4 pt-5'>
+                    <div className='col-sm-4 pt-5 pt-sm-0'>
                         <p className='font-400-16'>District</p>
-                        <select onChange={e => {sessionStorage.setItem("DistrictName", e.target.value)}} className='font-400-18 textfield' type="text">
+                        <select onChange={e => {sessionStorage.setItem("DistrictName", e.target.value)}} className='font-400-18 textfield textarea' type="text">
                         <option selected disabled>DISTRICT</option>
                         {initdata.data.districtArr.map((s)=>(
                         <option value={s.districtId}>{s.districtName}</option>
@@ -71,15 +71,15 @@ export default function AddressDetails () {
                 <div className='pb-5 row'>
                     <div className='col-sm-4'>
                         <p className='font-400-16'>Pincode</p>
-                        <input onChange={e => {sessionStorage.setItem("Pincode", e.target.value)}} className='font-400-18 textfield' type="text" placeholder='Pincode' />
+                        <input onChange={e => {sessionStorage.setItem("Pincode", e.target.value)}} className='font-400-18 textfield textarea' type="text" placeholder='Pincode' />
                     </div>
-                    <div className='col-sm-4 pt-5'>
+                    <div className='col-sm-4 pt-5 pt-sm-0'>
                         <p className='font-400-16'>Police Station</p>
-                        <input onChange={e => {sessionStorage.setItem("PS", e.target.value)}} className='font-400-18 textfield' type="text" placeholder='Police Station' />
+                        <input onChange={e => {sessionStorage.setItem("PS", e.target.value)}} className='font-400-18 textfield textarea' type="text" placeholder='Police Station' />
                     </div>
-                    <div className='col-sm-4 pt-5'>
+                    <div className='col-sm-4 pt-5 pt-sm-0'>
                         <p className='font-400-16'>Post Office</p>
-                        <input onChange={e => {sessionStorage.setItem("PO", e.target.value)}} className='font-400-18 textfield' type="text" placeholder='Post Office' />
+                        <input onChange={e => {sessionStorage.setItem("PO", e.target.value)}} className='font-400-18 textfield textarea' type="text" placeholder='Post Office' />
                     </div>
                 </div>
 
