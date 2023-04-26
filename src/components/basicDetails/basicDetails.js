@@ -89,10 +89,10 @@ function BasicDetails() {
       <div className='pt-5 row'>
         <div className='col-md-3'></div>
         <div className='col-md-3'></div>
-        <div className='col-md-3'>
+        <div className='col-6 col-md-3'>
           <button onClick={toSchoolDetails} className='previous-box'>Back</button>
         </div>
-        <div className='col-md-3'>
+        <div className='col-6 col-md-3'>
           <button onClick={toDeclarationDetails} className='next-box'>Next</button>
         </div>
       </div>
