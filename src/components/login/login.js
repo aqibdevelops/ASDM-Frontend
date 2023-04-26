@@ -101,24 +101,24 @@ function Login() {
             <div className=''>
               <div className=''>
                 <div className='py-5 row'>
-                    <div className='col-sm-2'></div>
-                    <div className='col-sm-3 '>
+                    <div className='col-md-2'></div>
+                    <div className='col-md-3 '>
                         <input className='font-400-18 textfield textfield2' type="text" onChange={event => {sessionStorage.setItem("MobileNo", event.target.value ) ;getMobileNo(event.target.value)}} placeholder="Enter Mobile No" value={mobileNo}/>
                     </div>
-                    <div className='col-sm-2'></div>
-                    <div className='col-sm-3'>
-                    <div className='col-sm-2 pt-5 pt-md-0'></div>
+                    <div className='col-md-2'></div>
+                    <div className='col-md-3'>
+                    <div className='col-md-2 pt-5 pt-md-0'></div>
                         <button className='previous-box' onClick={otpHandler}>Get OTP</button>
                     </div>
                 </div>
                 <div className='py-5 row'>
-                  <div className='col-sm-2'></div>
-                    <div className='col-sm-3'>
+                  <div className='col-md-2'></div>
+                    <div className='col-md-3'>
                         <input className='font-400-18 textfield textfield2' onChange={event => {sessionStorage.setItem("OTP", event.target.value ); getOtp(event.target.value)}} type="password" placeholder="Enter OTP" value={otp} />
                     </div>
-                    <div className='col-sm-2'></div>
-                    <div className='col-sm-3'>
-                    <div className='col-sm-2 pt-5 pt-md-0'></div>
+                    <div className='col-md-2'></div>
+                    <div className='col-md-3'>
+                    <div className='col-md-2 pt-5 pt-md-0'></div>
                         <button onClick={otpVerificationHandler} className="previous-box">Verify</button>
                     </div>
                 </div>

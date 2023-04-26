@@ -3,7 +3,6 @@
 .box {
     margin: auto;
     width: 90%;
-    margin-bottom: 1000px;
     padding-bottom: 100px;
 }
 
@@ -15,7 +14,8 @@
     box-sizing: border-box;
 
     position: absolute;
-    width: 280px;
+    width: 70%;
+    height: 30px;
     
     background: #D4F1F4;
     border: 1px solid #05445E;
@@ -47,13 +47,15 @@
     letter-spacing: 0em;
     text-align: left;
     color: #05445E;
-
 }
 
 
 @media(min-width: 768px) {
     .box{
         width: 60vw;
+    }
+    .textfield {
+        max-width: 20%;
     }
 }
 
@@ -68,7 +70,7 @@
 
 .previous-box {
     position: absolute;
-    width: 155px;
+    width: 130px;
     height: 47px;
     background: #ffffff;
     border: 1px solid #05445E;
@@ -82,7 +84,7 @@
 
 .next-box {
     position: absolute;
-    width: 155px;
+    width: 130px;
     height: 47px;
     font-family: 'Inter';
     font-style: normal;
@@ -92,6 +94,5 @@
     color: #05445E;
     background: #75E6DA;
     border: 1px solid #05445E;
-    margin-bottom: 300px;
 }
 

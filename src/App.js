@@ -1,12 +1,12 @@
 import './App.css';
-import Login from './components/login/login.js';
-import Navbar from './components/navbar';
-import BasicDetails from './components/basicDetails/basicDetails.js';
-import CourseDetails from './components/courseDetails/courseDetails.js';
-import RelocationDetail from './components/relocationDetails/relocationDetails.js';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import PersonalDetails from './components/personalDetails/personalDetails';
-import AddressDetails from './components/addressDetails/addressDetails';
+// import Navbar from './components/navbar';
+// import CourseDetails from './components/courseDetails/courseDetails.js';
+// import RelocationDetail from './components/relocationDetails/relocationDetails.js';
+// import PersonalDetails from './components/personalDetails/personalDetails';
+// import AddressDetails from './components/addressDetails/addressDetails';
+import Login from './components/login/login.js';
+import BasicDetails from './components/basicDetails/basicDetails.js';
 import DeclarationDetail from './components/declarationDetail/declarationDetail'
 import Success from './components/successPage/successPage';
 import Footer from './components/footer';
