@@ -2,8 +2,7 @@
 
 .box {
     margin: auto;
-    width: 90%;
-
+    width: 90%
 }
 
 .align-to-top {
@@ -15,7 +14,6 @@
 
     position: absolute;
     width: 280px;
-    height: 33px;
     
     background: #D4F1F4;
     border: 1px solid #05445E;
@@ -55,15 +53,6 @@
     .box{
         width: 60vw;
     }
-    .textfield {
-        width: 80%;
-    }
-}
-
-@media(max-width: 768px) {
-    .textfield {
-        width: 100% !important;
-    }
 }
 
 .button-container {
@@ -86,7 +75,7 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
-    margin-bottom: 40px;
+
     color: #05445E;
 }
 

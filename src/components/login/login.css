@@ -2,10 +2,9 @@ body{
     font-family: 'Coming Soon', sans-serif;
     color: #D4F1F4;
 }
-
 .wrapper {
     display: flex;
-    height: 76.5vh;
+
 }
 
 .side-section {
@@ -15,6 +14,7 @@ body{
     bottom: 0;
     left: 0;
     right: 0;
+
 }
 
 
@@ -55,4 +55,15 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.textfield2 {
+    height: 47px;
+    min-width: 180px;
+}
+
+@media screen and (min-width:576px) and (max-width:768px) {
+    .textfield2{
+        max-width: 60% !important;
+    }
 }

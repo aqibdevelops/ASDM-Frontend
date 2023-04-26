@@ -14,16 +14,18 @@ function BasicDetails() {
 
   const[firstName, setFirstName] = useState()
   const[middlename, setMiddleName] = useState()
-  const toPersonalDetails = () => {
-    navigate('/personalDetails')
+  const toDeclarationDetails = () => {
+    navigate('/declarationDetail')
+  }
+
+  const toSchoolDetails = () => {
+    navigate('/schoolDetails')
   }
 
   const initdata = JSON.parse(sessionStorage.getItem("initializationObject"))
 
   return (
     <div className='align-to-top font-600 box'>
-      {state}
-      {firstName}
     <Container>
       <Form>
       <div className='heading-font row'>Basic Details</div>
@@ -87,9 +89,11 @@ function BasicDetails() {
       <div className='pt-5 row'>
         <div className='col-md-3'></div>
         <div className='col-md-3'></div>
-        <div className='col-md-3'></div>
         <div className='col-md-3'>
-          <button onClick={toPersonalDetails} className='next-box'>Next</button>
+          <button onClick={toSchoolDetails} className='previous-box'>Back</button>
+        </div>
+        <div className='col-md-3'>
+          <button onClick={toDeclarationDetails} className='next-box'>Next</button>
         </div>
       </div>
     </Container>

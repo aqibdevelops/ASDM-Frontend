@@ -88,44 +88,48 @@ function Login() {
   };
   const navigate = useNavigate()
 
-  const toBasicDetails = () => {
-    navigate('/basicDetails')
+  const toSchoolDetails = () => {
+    navigate('/schoolDetails')
   }
 
 
   return (
-    <div className='align-to-top wrapper'>
-        <div className='side-section'>
-                <div className='login-section'>
-                    <div className='login-container'>
-                        <form>
-                            <div className='flex-column'>
-                                <div style={{textAlign:'center', fontFamily: 'Coming Soon'}}className='pt-5 pb-3 fs-3 text'>REGISTRATION</div>
-                                <div className='py-4 row'>
-                                    <div className='col-sm-8'>
-                                        <Form.Control type="text" onChange={event => {sessionStorage.setItem("MobileNo", event.target.value ) ;getMobileNo(event.target.value)}} placeholder="Enter Mobile No" value={mobileNo}/>
-                                    </div>
-                                    <div className='col-sm-4'>
-                                        <Button onClick={otpHandler} className="custom-btn">Get OTP</Button>
-                                    </div>
-                                </div>
-                                <div className='py-4 row'>
-                                    <div className='col-sm-8'>
-                                        <Form.Control onChange={event => {sessionStorage.setItem("OTP", event.target.value ); getOtp(event.target.value)}} type="password" placeholder="Enter OTP" value={otp} />
-                                    </div>
-                                    <div className='col-sm-4'>
-                                        <Button onClick={otpVerificationHandler} className="custom-btn">Verify</Button>
-                                    </div>
-                                </div>
-                                <div className='py-4 row'>
-                                    <div className='col-sm-2'></div>
-                                        { successStatus ? <Button className="custom-btn col-sm-8" onClick={toBasicDetails} >Proceed</Button> : <div /> }
-                                    <div className='col-sm-2'></div>
-                                </div>
-                            </div>
-                        </form>
+    <div className='align-to-top font-600 box'>
+        <div className='heading-font pb-5 row'>Skill Yatra Registration</div>
+        <div className=''>
+          <div className=''>
+            <div className=''>
+              <div className=''>
+                <div className='py-5 row'>
+                    <div className='col-sm-2'></div>
+                    <div className='col-sm-3 '>
+                        <input className='font-400-18 textfield textfield2' type="text" onChange={event => {sessionStorage.setItem("MobileNo", event.target.value ) ;getMobileNo(event.target.value)}} placeholder="Enter Mobile No" value={mobileNo}/>
+                    </div>
+                    <div className='col-sm-2'></div>
+                    <div className='col-sm-3'>
+                    <div className='col-sm-2 pt-5 pt-md-0'></div>
+                        <button className='previous-box' onClick={otpHandler}>Get OTP</button>
                     </div>
                 </div>
+                <div className='py-5 row'>
+                  <div className='col-sm-2'></div>
+                    <div className='col-sm-3'>
+                        <input className='font-400-18 textfield textfield2' onChange={event => {sessionStorage.setItem("OTP", event.target.value ); getOtp(event.target.value)}} type="password" placeholder="Enter OTP" value={otp} />
+                    </div>
+                    <div className='col-sm-2'></div>
+                    <div className='col-sm-3'>
+                    <div className='col-sm-2 pt-5 pt-md-0'></div>
+                        <button onClick={otpVerificationHandler} className="previous-box">Verify</button>
+                    </div>
+                </div>
+                <div className='py-5 row'>
+                    <div className='col-sm-4'></div>
+                    <div className='col-sm-2'>{ successStatus ? <button className="next-box col-sm-2" onClick={toSchoolDetails} >Proceed</button> : <div /> }</div>
+                    <div className='col-sm-6'></div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
     </div>
   )

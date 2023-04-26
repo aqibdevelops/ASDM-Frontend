@@ -13,6 +13,7 @@ import Footer from './components/footer';
 import Header from './components/header';
 import { useSelector, useDispatch } from 'react-redux';
 import { actions } from './store/index';
+import SchoolDetails from './components/schoolDetails/schoolDetails';
 
 function App() {
   const counter = useSelector((state)=> state.counter)
@@ -32,11 +33,12 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path = '/' element = { <Login /> } />
+          <Route path = '/schoolDetails' element= {<SchoolDetails /> } />
           <Route path = '/basicDetails' element = { <BasicDetails /> } />
-          <Route path = '/courseDetails' element = { <CourseDetails /> } />
+          {/* <Route path = '/courseDetails' element = { <CourseDetails /> } />
           <Route path = '/relocationDetails' element = { <RelocationDetail /> } />
           <Route path = '/personalDetails' element = { <PersonalDetails /> } />
-          <Route path = '/addressDetails' element = { <AddressDetails/> } />
+          <Route path = '/addressDetails' element = { <AddressDetails/> } /> */}
           <Route path = '/declarationDetail' element = { <DeclarationDetail/> } />
           <Route path = '/success' element = { <Success /> } />
         </Routes>
