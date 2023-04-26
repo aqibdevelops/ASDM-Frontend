@@ -24,7 +24,7 @@ export default function SchoolDetails () {
             <input onChange={e => {sessionStorage.setItem("schoolName", e.target.value)}} className='font-400-18 textfield' type="text"/>      
           </div>
           <div className='col-md-4 pt-5'>
-            <p className='font-400-16'>Medium of Instruction</p>
+            <p className='font-400-16'>Medium&nbsp;of&nbsp;Instruction</p>
             <input onChange={e => {sessionStorage.setItem("schoolMedium", e.target.value)}} className='font-400-18 textfield' type="text"/>
           </div>
           <div className='col-md-4 pt-5'>
